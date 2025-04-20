@@ -220,13 +220,18 @@
     });
 
     // סליידר תמונות
-    const images = ["גורס שאפה.jpg", "סוגי הגריסה.jpg"];
+    const images = ["גורס שאפה.jpg", "סוגי הגריסה.jpg", "גריסה.jpg", "הרכבה.jpg", "חלקים.jpg", "כיור.jpg"];
     let currentImage = 0;
 
     function changeImage(direction) {
       currentImage = (currentImage + direction + images.length) % images.length;
       document.getElementById("sliderImage").src = images[currentImage];
     }
+
+    // מעבר אוטומטי בין תמונות כל 5 שניות
+    setInterval(function() {
+      changeImage(1);
+    }, 5000);  // 5000 מילי-שניות = 5 שניות
   </script>
 
 </body>

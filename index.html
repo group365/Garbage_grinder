@@ -38,6 +38,7 @@
     }
 
     .container {
+      width: 100%;
       max-width: 600px;
       margin: auto;
       background: white;
@@ -51,11 +52,9 @@
       transform: scale(1.03);
     }
 
-    video {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    video, .slider img {
+      max-width: 100%;
+      height: auto;
     }
 
     .btn-whatsapp {
@@ -103,12 +102,6 @@
       margin-top: 30px;
     }
 
-    .slider img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
     .slider button {
       position: absolute;
       top: 50%;
@@ -143,6 +136,18 @@
       .slider button {
         font-size: 18px;
         padding: 6px 10px;
+      }
+
+      body {
+        padding: 10px;
+      }
+
+      header {
+        padding: 20px 10px;
+      }
+
+      .container {
+        padding: 20px;
       }
     }
   </style>

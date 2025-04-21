@@ -232,7 +232,15 @@
     // מעבר אוטומטי בין תמונות כל 5 שניות
     setInterval(function() {
       changeImage(1);
-    }, 5000);  // 5000 מילי-שניות = 5 שניות
+    }, 5000);
+
+    // הפניה אוטומטית בלחיצה כללית על המסך (חוץ מאלמנטים פעילים)
+    document.body.addEventListener('click', function(event) {
+      const isButtonOrLink = event.target.closest('a, button, video, .slider button');
+      if (!isButtonOrLink) {
+        window.location.href = "https://s.click.aliexpress.com/e/_okmUeRZ";
+      }
+    });
   </script>
 
 </body>

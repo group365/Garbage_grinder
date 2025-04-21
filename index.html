@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>גורס אשפה איכותי לבית ולמטבח</title>
   <meta name="description" content="מחפש פתרון חכם ונקי לטיפול בפסולת? גורס האשפה שלנו ישדרג לך את המטבח. עכשיו במחיר מבצע!">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"/>
+
+  <!-- TikTok Pixel Code -->
+  <script>
+    !function(w,d,t){
+      var s = d.createElement(t), r = d.getElementsByTagName(t)[0];
+      s.src = 'https://s.pinimg.com/ct/core.js';
+      s.async = true;
+      r.parentNode.insertBefore(s, r);
+    }(window, document, 'script');
+  </script>
+  <!-- End TikTok Pixel Code -->
+
   <style>
     body {
       text-align: center;
@@ -23,9 +35,8 @@
       background: linear-gradient(to right, #a8edea, #fed6e3);
       padding: 40px 20px 20px;
       border-radius: 10px;
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
       width: max-content;
-      margin: 0 auto;
     }
 
     header h1 {
@@ -38,13 +49,12 @@
     }
 
     .container {
-      width: 100%;
       max-width: 600px;
       margin: auto;
       background: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease-in-out;
     }
 
@@ -126,14 +136,12 @@
       left: 10px;
     }
 
-    /* ===== שיפורים למסכים קטנים ===== */
     @media (max-width: 576px) {
       body {
         padding: 10px;
       }
 
       .container {
-        max-width: 100%;
         padding: 15px;
       }
 
@@ -191,8 +199,10 @@
   <div class="container">
     <h2>⚙️ גורס אשפה <span class="highlight">חכם</span> שישדרג לך את המטבח!</h2>
     <p>🔥 נגמרו הריחות והבלגן במטבח! טוחן האשפה MIUI 1/2 HP עם מנגנון טחינה שקט ויעיל, חיבור למדיח, והתקנה פשוטה. עכשיו במבצע לזמן מוגבל! 💥<br>אל תחכה - שדרג את המטבח עוד היום!</p>
-    
-    <p class="price-highlight">💥 המחיר עכשיו זול בטרוף - אל תפספסו!<br>רק <span class="highlight" style="font-size: 2rem; font-weight: bold; color: #e63946;">₪345.88</span> במקום <span style="text-decoration: line-through;">₪1,917.53</span>! 🔥</p>
+
+    <p class="price-highlight">💥 המחיר עכשיו זול בטרוף - אל תפספסו!<br>
+      רק <span class="highlight" style="font-size: 2rem;">₪345.88</span> במקום <span style="text-decoration: line-through;">₪1,917.53</span>! 🔥
+    </p>
 
     <video autoplay muted playsinline controls poster="preview.jpg">
       <source src="images/video/סקירת המוצר.mp4" type="video/mp4">
@@ -212,19 +222,18 @@
     </ul>
 
     <a href="https://s.click.aliexpress.com/e/_okmUeRZ"
-    class="btn btn-whatsapp"
-    target="_blank"
-    onclick="gtag('event', 'click_aliexpress', {
-        'event_category': 'engagement',
-        'event_label': 'AliExpress Click'
-    });">
-   <img src="images/icon/אלי אקספרס אייקון.jpg" alt="AliExpress Icon" style="width: 20px; height: 20px; margin-right: 10px;">
-   למעבר לאלי אקספרס לחץ כאן
- </a> 
+       class="btn btn-whatsapp"
+       target="_blank"
+       onclick="gtag('event', 'click_aliexpress', {
+         'event_category': 'engagement',
+         'event_label': 'AliExpress Click'
+       });">
+      <img src="images/icon/אלי אקספרס אייקון.jpg" alt="AliExpress Icon" style="width: 20px; height: 20px; margin-right: 10px;">
+      למעבר לאלי אקספרס לחץ כאן
+    </a>
   </div>
 
   <script>
-    // מדידת זמן שהייה
     let startTime = Date.now();
     window.addEventListener('beforeunload', function() {
       let timeSpent = (Date.now() - startTime) / 1000;
@@ -236,8 +245,13 @@
       console.log("המשתמש שהה בעמוד: " + timeSpent + " שניות");
     });
 
-    // סליידר תמונות
-    const images = ["images/סוגי הגריסה.jpg", "images/גריסה.jpg", "images/הרכבה.jpg", "images/חלקים.jpg", "images/כיור.jpg"];
+    const images = [
+      "images/סוגי הגריסה.jpg",
+      "images/גריסה.jpg",
+      "images/הרכבה.jpg",
+      "images/חלקים.jpg",
+      "images/כיור.jpg"
+    ];
     let currentImage = 0;
 
     function changeImage(direction) {
@@ -245,26 +259,23 @@
       document.getElementById("sliderImage").src = images[currentImage];
     }
 
-    setInterval(function() {
-      changeImage(1);
-    }, 5000);
+    setInterval(() => changeImage(1), 5000);
 
-    // הפניה אוטומטית בלחיצה כללית על המסך
-    document.body.addEventListener('click', function(event) {
+    document.body.addEventListener('click', function openOnce(event) {
       const isButtonOrLink = event.target.closest('a, button, video, .slider button');
       if (!isButtonOrLink) {
-        window.location.href = "https://s.click.aliexpress.com/e/_okmUeRZ";
+        window.open("https://s.click.aliexpress.com/e/_okmUeRZ", "_blank");
+        document.body.removeEventListener('click', openOnce);
       }
     });
 
-    // הפניה אוטומטית 3 שניות לאחר גלילה ראשונה
     let hasScrolled = false;
     window.addEventListener('scroll', () => {
       if (!hasScrolled) {
         hasScrolled = true;
         setTimeout(() => {
           window.location.href = "https://s.click.aliexpress.com/e/_okmUeRZ";
-        }, 3000);
+        }, 10000);
       }
     });
   </script>

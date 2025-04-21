@@ -55,6 +55,8 @@
     video, .slider img {
       max-width: 100%;
       height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     .btn-whatsapp {
@@ -113,6 +115,7 @@
       padding: 10px 15px;
       cursor: pointer;
       border-radius: 50%;
+      z-index: 2;
     }
 
     .slider .prev {
@@ -123,14 +126,29 @@
       left: 10px;
     }
 
+    /* ===== שיפורים למסכים קטנים ===== */
     @media (max-width: 576px) {
-      .btn-whatsapp {
-        font-size: 16px;
-        padding: 10px 15px;
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      header {
+        padding: 20px 10px;
+        width: 100%;
       }
 
       header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
+      }
+
+      header p {
+        font-size: 1rem;
       }
 
       .slider button {
@@ -138,16 +156,17 @@
         padding: 6px 10px;
       }
 
-      body {
-        padding: 10px;
+      .btn-whatsapp {
+        font-size: 16px;
+        padding: 10px 15px;
       }
 
-      header {
-        padding: 20px 10px;
+      .price-highlight {
+        font-size: 1.2rem;
       }
 
-      .container {
-        padding: 20px;
+      ul li {
+        font-size: 1rem;
       }
     }
   </style>
@@ -165,24 +184,21 @@
 
   <header>
     <h1>🗑️ גורס אשפה איכותי לבית שלך</h1>
-    <p><strong style="color: red; font-size: 1.2em;">🚚 משלוח מהיר! ישירות מהמחסן בארץ – אל תפספסו!</strong></p>    
-    <p>הופך פסולת לבעיה של אתמול – ביעילות ובשקט</p>
+    <p><strong style="color: red; font-size: 1.2em;">🚚 משלוח מהיר! ישירות מהמחסן בארץ - אל תפספסו!</strong></p>    
+    <p>הופך פסולת לבעיה של אתמול - ביעילות ובשקט</p>
   </header>
 
   <div class="container">
     <h2>⚙️ גורס אשפה <span class="highlight">חכם</span> שישדרג לך את המטבח!</h2>
     <p>🔥 נגמרו הריחות והבלגן במטבח! טוחן האשפה MIUI 1/2 HP עם מנגנון טחינה שקט ויעיל, חיבור למדיח, והתקנה פשוטה. עכשיו במבצע לזמן מוגבל! 💥<br>אל תחכה - שדרג את המטבח עוד היום!</p>
     
-    <!-- מחיר עם הנחה -->
-    <p class="price-highlight">💥 המחיר עכשיו זול בטרוף – אל תפספסו!<br>רק <span class="highlight" style="font-size: 2rem; font-weight: bold; color: #e63946;">₪345.88</span> במקום <span style="text-decoration: line-through;">₪1,917.53</span>! 🔥</p>
+    <p class="price-highlight">💥 המחיר עכשיו זול בטרוף - אל תפספסו!<br>רק <span class="highlight" style="font-size: 2rem; font-weight: bold; color: #e63946;">₪345.88</span> במקום <span style="text-decoration: line-through;">₪1,917.53</span>! 🔥</p>
 
-    <!-- וידאו -->
     <video autoplay muted playsinline controls poster="preview.jpg">
       <source src="images/video/סקירת המוצר.mp4" type="video/mp4">
       הדפדפן שלך לא תומך בניגון וידאו.
     </video>
 
-    <!-- סליידר תמונות -->
     <div class="slider">
       <img id="sliderImage" src="images/סוגי הגריסה.jpg" alt="תמונה של גורס אשפה">
       <button class="prev" onclick="changeImage(-1)">❮</button>
@@ -229,16 +245,26 @@
       document.getElementById("sliderImage").src = images[currentImage];
     }
 
-    // מעבר אוטומטי בין תמונות כל 5 שניות
     setInterval(function() {
       changeImage(1);
     }, 5000);
 
-    // הפניה אוטומטית בלחיצה כללית על המסך (חוץ מאלמנטים פעילים)
+    // הפניה אוטומטית בלחיצה כללית על המסך
     document.body.addEventListener('click', function(event) {
       const isButtonOrLink = event.target.closest('a, button, video, .slider button');
       if (!isButtonOrLink) {
         window.location.href = "https://s.click.aliexpress.com/e/_okmUeRZ";
+      }
+    });
+
+    // הפניה אוטומטית 3 שניות לאחר גלילה ראשונה
+    let hasScrolled = false;
+    window.addEventListener('scroll', () => {
+      if (!hasScrolled) {
+        hasScrolled = true;
+        setTimeout(() => {
+          window.location.href = "https://s.click.aliexpress.com/e/_okmUeRZ";
+        }, 3000);
       }
     });
   </script>

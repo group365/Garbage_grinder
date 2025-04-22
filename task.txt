@@ -1,5 +1,22 @@
-להריץ על הדף נחימה Popunder
-מחירה
-דרופשיפינג
-  - חשבון מנהל מודעות - TikTok Ads Manager
-  TikTok Pixel
+1. להריץ על הדף נחיתה Popunder V
+2. חשבון מנהל מודעות - TikTok Ads Manager V
+3. TikTok Pixel V
+4. הקמת אתר וואדרפס - לאחר ההקמה 
+5. חיבור לגוגל אנילטקס
+6. נכנס ביוזר אדמין אל פלגין ונוסיף       Insert Headers and Footers Code -> Settings -> Add New Script -> Google Analytics - 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW4Q5K0P8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZW4Q5K0P8J');
+</script>
+
+
+
+7. סאג' קונסול
+8. מציאת מוצרים נוספים
+9. לשכפל לעוד שפות
